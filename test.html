@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>TAG index Webサイト</title>
+
+<script type="text/javascript">
+<!--
+
+function disp(){
+
+	var now = new Date();
+
+	// （不要な行を削除する）
+	var watch1 = now.toLocaleString(); // ローカル時
+	var watch2 = now.toGMTString(); // グリニッジ標準時
+	var watch3 = now.toUTCString(); // 世界標準時
+
+	// テキストフィールドにデータを渡す処理（不要な行を削除する）
+	document.form1.field1.value = watch1; // ローカル時
+	document.form1.field2.value = watch2; // グリニッジ標準時
+	document.form1.field3.value = watch3; // 世界標準時
+
+	setTimeout("disp()", 1000);
+
+}
+
+// -->
+</script>
+
+</head>
+<body onLoad="disp()">
+
+<form action="#" name="form1">
+<input type="text" name="field1" size="30"> ローカル時<br>
+<input type="text" name="field2" size="30"> グリニッジ標準時<br>
+<input type="text" name="field3" size="30"> 世界標準時
+</form>
+
+</body>
+</html>
